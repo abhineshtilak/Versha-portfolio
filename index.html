@@ -6,17 +6,22 @@
   <title>Versha | Portfolio</title>
   <link rel="shortcut icon" href="/assets/logo.png" type="image/png"/>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css"/>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+
+  <!-- JS -->
   <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
+    
     <!-- NAVBAR -->
-    <nav id="header">
+    <nav id="header" aria-label="Main Navigation">
       <div class="nav-logo">
-        <p class="nav-name">Versha</p>
-        <span></span>
-      </div>  
+        <p class="nav-name">Versha</p><span></span>
+      </div>
+
       <div class="nav-menu" id="myNavMenu">
         <ul class="nav-menu-list">
           <li class="nav-list"><a href="#home" class="nav-link">Home</a></li>
@@ -24,31 +29,41 @@
           <li class="nav-list"><a href="#about" class="nav-link">Blogs</a></li>
           <li class="nav-list"><a href="#projects" class="nav-link">Projects</a></li>
           <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
+          <!-- Theme toggle -->
+          <li class="nav-list theme-toggle" title="Toggle Theme">
+            <i class="uil uil-moon" id="theme-icon" onclick="toggleTheme()"></i>
+          </li>
         </ul>
       </div>
+
+      <!-- CV Button -->
       <div class="nav-button" style="display: none;">
         <button class="btn">Download CV <i class="uil uil-file-exclamation-alt"></i></button>
       </div>
+
+      <!-- Mobile Menu -->
       <div class="nav-menu-btn">
         <i class="uil uil-bars" onclick="myMenuFunction()"></i>
       </div>
     </nav>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main class="wrapper">
-      <!-- HOME SECTION -->
+      
+      <!-- HOME -->
       <section class="featured-box" id="home">
         <div class="featured-text">
-          <div class="featured-text-card"><span>Rahul</span></div>
+          <div class="featured-text-card"><span>Versha</span></div>
           <div class="featured-name">
             <p>I'm <span class="typedText"></span></p>
           </div>
           <div class="featured-text-info">
-            <p>Crafting stunning, interactive, and user-friendly websites with modern designs and cutting-edge technologies.</p>
+            <b><p>Portrait and painting artist | Data & commodity analyst | CSR professional
+Freelancer with diverse experience, open to collaborations and new roles.</p></b>
           </div>
           <div class="featured-text-btn">
             <a class="hire-me" href="/hire-me">Hire Me</a>
-            <button style="display: none;" class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            <button class="btn" style="display: none;">Download CV <i class="uil uil-file-alt"></i></button>
           </div>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/rahul-parihar-6aba79300/" target="_blank" class="icon" aria-label="LinkedIn">
@@ -66,13 +81,12 @@
         </div>
         <div class="scroll-icon-box">
           <a href="#about" class="scroll-btn" aria-label="Scroll Down">
-            <i class="uil uil-mouse-alt"></i>
-            <p>Scroll Down</p>
+            <i class="uil uil-mouse-alt"></i><p>Scroll Down</p>
           </a>
         </div>
       </section>
 
-      <!-- ABOUT SECTION -->
+      <!-- ABOUT -->
       <section class="section" id="about">
         <div class="top-header">
           <h1>About Me</h1>
@@ -80,70 +94,109 @@
         <div class="row">
           <div class="col">
             <div class="about-info">
-              <h3>My Introduction</h3>
+              <h3>Welcome to my portfolio!</h3>
               <p>
-                I am well-versed in HTML, CSS, JavaScript, and modern frameworks and libraries, allowing me to implement interactive features. I also have experience working with content management systems (CMS) like WordPress.
-              </p>
+
+ Hi there! I am Versha, multidisciplinary professional combining creativity with analytical thinking. As a painting and portrait artist, I create expressive, detailed works that tell visual stories. Alongside my art, I work as a data and commodity analyst, transforming complex data into clear insights.
+With experience as a Customer Service Representative (CSR) and a track record of working with diverse clients in both freelance and full-time roles, I bring strong communication and problem-solving skills to every project.
+<br> <br>
+<b>I'm currently open to freelance work, collaborations, and creative or analytical opportunities. Let’s connect and create something meaningful together.</b>
+
+!</p>
             </div>
           </div>
           <div class="col">
+            <!-- Skills Grid -->
             <div class="skills-box">
-              <div class="skills-header"><h3>Frontend</h3></div>
-              <div class="skills-list">
-                <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span><span>React</span>
-              </div>
+              <div class="skills-header"><h3>Art</h3></div>
+              <div class="skills-list"><span>Portraits</span><span>Paintings</span><span>Logos</span><span>Miniature</span><span>Cubism</span></div>
             </div>
             <div class="skills-box">
-              <div class="skills-header"><h3>Designing</h3></div>
-              <div class="skills-list">
-                <span>HTML</span><span>CSS</span><span>Figma</span>
-              </div>
+              <div class="skills-header"><h3>Analyst</h3></div>
+              <div class="skills-list"><span>Data Analysis</span><span>Commodity Analysis</span><span>Consultant</span></div>
             </div>
             <div class="skills-box">
+              <div class="skills-header"><h3>CSR</h3></div>
+              <div class="skills-list"><span>Certified CSR</span><span>Adressing Social Issues</span><span>Volunteer</span></div>
+            </div>
+                <div class="skills-box">
               <div class="skills-header"><h3>Others</h3></div>
-              <div class="skills-list">
-                <span>Webflow</span><span>WordPress</span><span>Shopify</span>
-              </div>
+              <div class="skills-list"><span>AI and Prompt Engineering</span><span>Digital Marketing</span><span>Web designing</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PROJECTS SECTION -->
+
+      <!-- BLOGS SECTION -->
+ <section class="section" id="projects">
+  <h2 class="section-title blog-title top-header">Latest Blogs</h2>
+  <div class="blog-grid project-container">
+    <div class="blog-card" data-reveal>
+      <img src="assets/blog1.jpg" alt="Blog 1">
+      <div class="blog-card-content">
+        <h3>Feminism Is for Everyone</h3>
+        <p>
+Feminism is not about women being better than men—it's about equality. It challenges systems that limit people based on gender, benefiting all of us by promoting fairness and freedom. True feminism invites everyone, regardless of gender, to stand up against inequality. It's a shared effort, not a battle of sexes. When one group rises, we all move forward.</p>
+        <a href="/blog/blog1.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+    <div class="blog-card" data-reveal>
+      <img src="assets/blog2.jpg" alt="Blog 1">
+      <div class="blog-card-content">
+        <h3> The Power of Choice</h3>
+        <p>
+Feminism empowers women to make choices—whether it's about careers, clothing, or motherhood. It doesn’t prescribe a “right way” to be a woman; instead, it supports the right to choose freely and without judgment. From boardrooms to households, choice is at the heart of liberation. It's about owning our lives and narratives on our own terms.</p>
+        <a href="/blog/blog1.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+    <div class="blog-card" data-reveal>
+      <img src="assets/blog3.jpg" alt="Blog 1">
+      <div class="blog-card-content">
+        <h3>Breaking the Silence</h3>
+        <p>One of feminism’s greatest strengths is its insistence on giving voice to the unheard. It creates space for stories of struggle, resistance, and resilience. Whether it’s workplace discrimination or domestic violence, feminism encourages speaking out and being believed. Breaking silence is the first step toward justice.</p>
+        <a href="/blog/blog1.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+    <!-- More blog cards -->
+  </div>
+</section>
+
+
+
+      <!-- PROJECTS -->
       <section class="section" id="projects">
         <div class="top-header">
           <h1>Projects</h1>
         </div>
         <div class="project-container">
           <div class="project-box">
-            <i class="uil uil-briefcase-alt"></i>
-            <h3>Completed</h3>
-            <label>5+ Finished Projects</label>
+            <i class="uil uil-briefcase-alt"></i><h3>Completed</h3><label>50+ Finished Projects</label>
           </div>
           <div class="project-box">
-            <i class="uil uil-users-alt"></i>
-            <h3>Clients</h3>
-            <label>3 Happy Clients</label>
+            <i class="uil uil-users-alt"></i><h3>Clients</h3><label>100+ Happy Clients</label>
           </div>
           <div class="project-box">
-            <i class="uil uil-award"></i>
-            <h3>Experience</h3>
-            <label>1 Year in the field</label>
+            <i class="uil uil-award"></i><h3>Experience</h3><label>5 Year in the field</label>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT SECTION -->
+      <!-- CONTACT -->
       <section class="section" id="contact">
         <div class="top-header">
           <h1>Get in Touch</h1>
-          <span>Have a project in mind? Let's collaborate and make it a reality!</span>
+          <span>Open to freelance projects and collaborations—let’s bring your ideas to life.
+Available for hire—let’s create something impactful together.
+Looking to collaborate? I’m just a message away.
+Let’s work together—creative or analytical, I’m ready to contribute.
+Hire me for your next project—artistic or data-driven, I’ve got you covered.</span>
         </div>
         <div class="row">
           <div class="contact-info" onclick="copyToClipboard()" role="button" tabindex="0">
-            <img class="clipboard" src="assets/content_copy.svg" alt="Copy icon" />
-            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-            <span id="email"><i class="uil uil-envelope"></i> r.prahulparihar70@gmail.com</span>
+        <i class="fa-solid fa-copy"></i>
+            <h2>Find Me</h2>
+            <span id="email"><i class="uil uil-envelope"></i>v.pvershaparihar@gmail.com</span>
           </div>
           <div id="copied-popup">Copied!</div>
         </div>
@@ -152,26 +205,31 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="top-footer"><p>Rahul .</p></div>
+      <div class="top-footer"><p>Versha</p></div>
       <div class="middle-footer">
         <ul class="footer-menu">
-          <li class="footer-menu-list"><a href="#home">Home</a></li>
-          <li class="footer-menu-list"><a href="#about">About</a></li>
-          <li class="footer-menu-list"><a href="#projects">Projects</a></li>
-          <li class="footer-menu-list"><a href="#contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#about">Blogs</a></li>
+
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-social-icons">
-        <a href="https://www.linkedin.com/in/rahul-parihar-6aba79300/" target="_blank" class="icon" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
-        <a href="https://github.com/rahullll70" target="_blank" class="icon" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
+        <a href="https://www.linkedin.com/in/rahul-parihar-6aba79300/" target="_blank" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+        <a href="https://github.com/rahullll70" target="_blank" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
       </div>
       <div class="bottom-footer">
-        <p>© <a href="#home" style="text-decoration: none;">Rahul</a> - All rights reserved</p>
+        <p>© <a href="#home">Versha</a> - All rights reserved</p>
       </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()" title="Go to top"><i class="uil uil-arrow-up"></i></button>
   </div>
 
-  <!-- Scripts -->
+  <!-- LIBRARIES -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://static.app/js/static.js"></script>

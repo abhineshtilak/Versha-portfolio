@@ -1,0 +1,225 @@
+
+
+/*                     CONTAINER                    */
+
+/* For tablets */
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* For mobile screens */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/*                         NAVBAR                 */
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: var(--body-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.show {
+    transform: translateX(0);
+  }
+
+  .nav-menu-btn {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+  .nav-menu-list {
+    background-color: #e9e9e9;
+    border-radius: 30px;
+    width: 250px;
+    margin-top: 50px;
+    margin-right: 100px;
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+/* For tablets and small screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured-box {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .featured-text,
+  .featured-image {
+    width: 100%;
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col {
+    width: 100%;
+  }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu-btn {
+    display: block;
+  }
+
+  .featured-name {
+    font-size: 30px;
+  }
+
+  .featured-text-info {
+    font-size: 14px;
+  }
+
+  .featured-text-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For extra small screens (max-width: 320px) */
+@media only screen and (max-width: 320px) {
+  .container {
+    padding: 10px;
+  }
+
+  .featured-name {
+    font-size: 24px;
+  }
+
+  .image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .footer-social-icons {
+    flex-direction: column;
+  }
+}
+
+/*              PROJECT SECTION */
+
+@media only screen and (max-width: 768px) {
+  .project-box {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 48%;
+  }
+
+  .project-box i {
+    font-size: 2.5rem;
+  }
+
+  .project-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-box p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width: 540px) {
+  .project-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .project-box i {
+    font-size: 2rem;
+  }
+
+  .project-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-box p {
+    font-size: 0.8rem;
+  }
+}
+
+/*               FOOTER           */
+
+/* MEDIA QUERIES FOR RESPONSIVENESS FOOTER */
+@media only screen and (max-width: 768px) {
+  .middle-footer .footer-menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* In case there are many links */
+  }
+
+  .footer-menu-list a {
+    margin: 0 10px; /* Adjust horizontal spacing */
+  }
+
+  .footer-social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

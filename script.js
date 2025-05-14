@@ -1,13 +1,15 @@
-/* ----- NAVIGATION MENU TOGGLE ----- */
 function myMenuFunction() {
-  const menuBtn = document.getElementById('myNavMenu');
-  menuBtn.classList.toggle('responsive');
+  var menuBtn = document.getElementById('myNavMenu');
+
+  if (menuBtn.className === 'nav-menu') {
+    menuBtn.className += 'responsive';
+  } else {
+    menuBtn.className = 'nav-menu';
+  }
 }
 
-/* ----- HEADER SHADOW ON SCROLL ----- */
 window.onscroll = function () {
   headerShadow();
-  scrollActive(); // Keep scroll link activation synced
 };
 
 function headerShadow() {
@@ -25,21 +27,25 @@ function headerShadow() {
 }
 
 /* ----- TYPING EFFECT ----- */
+
 const typingEffect = new Typed('.typedText', {
-  strings: ['An Artist','A Certified CSR', 'A Data Analyst', 'A Commodity Analyst' ],
+  strings: ['An Artist', 'A CSR', 'A Data Analyst', 'A Commodity Analyst'],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
   backDelay: 500,
 });
 
-/* ----- SCROLL REVEAL ANIMATION (TOP) ----- */
+/* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
+
 const sr = ScrollReveal({
   origin: 'top',
   distance: '80px',
   duration: 2000,
   reset: true,
 });
+
+/* -- HOME -- */
 
 sr.reveal('.featured-text-card', {});
 sr.reveal('.featured-name', { delay: 100 });
@@ -48,18 +54,28 @@ sr.reveal('.featured-text-btn', { delay: 200 });
 sr.reveal('.social-icons', { delay: 200 });
 sr.reveal('.featured-image', { delay: 300 });
 
-sr.reveal('.project-box', { interval: 200 });
-sr.reveal('.top-header', {});
+/* -- PROJECT BOX -- */
 
-/* ----- SCROLL REVEAL LEFT/RIGHT ----- */
+sr.reveal('.project-box', { interval: 200 });
+
+/* -- HEADINGS -- */
+
+sr.reveal('.top-header', {});
+/* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
+
+/* -- ABOUT INFO & CONTACT INFO -- */
+
 const srLeft = ScrollReveal({
   origin: 'left',
   distance: '80px',
   duration: 2000,
   reset: true,
 });
+
 srLeft.reveal('.about-info', { delay: 100 });
 srLeft.reveal('.contact-info', { delay: 100 });
+
+/* -- ABOUT SKILLS & FORM BOX -- */
 
 const srRight = ScrollReveal({
   origin: 'right',
@@ -67,37 +83,41 @@ const srRight = ScrollReveal({
   duration: 2000,
   reset: true,
 });
+
 srRight.reveal('.skills-box', { delay: 100 });
 srRight.reveal('.form-control', { delay: 100 });
 
-/* ----- ACTIVE LINK ON SCROLL ----- */
+/* ----- CHANGE ACTIVE LINK ----- */
+
 const sections = document.querySelectorAll('section[id]');
 function scrollActive() {
   const scrollY = window.scrollY;
-
   sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    const sectionId = current.getAttribute('id');
-    const link = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
-
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute('id');
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      link?.classList.add('active-link');
+      document
+        .querySelector('.nav-menu a[href*=' + sectionId + ']')
+        .classList.add('active-link');
     } else {
-      link?.classList.remove('active-link');
+      document
+        .querySelector('.nav-menu a[href*=' + sectionId + ']')
+        .classList.remove('active-link');
     }
   });
 }
 window.addEventListener('scroll', scrollActive);
 
-/* ----- COPY EMAIL TO CLIPBOARD FUNCTION ----- */
+/* ---------------------------------------------- CLIPBOARD FUNCTION ------------------------------------------- */
+
 function copyToClipboard() {
   const emailText = document.getElementById("email").innerText;
-
+  
   navigator.clipboard.writeText(emailText).then(() => {
-    showCopiedPopup();
+      showCopiedPopup(); 
   }).catch(err => {
-    console.error("Failed to copy: ", err);
+      console.error("Failed to copy: ", err);
   });
 }
 
@@ -105,7 +125,30 @@ function showCopiedPopup() {
   const popup = document.getElementById("copied-popup");
 
   popup.classList.add("show");
+
   setTimeout(() => {
-    popup.classList.remove("show");
+      popup.classList.remove("show");
   }, 1500);
 }
+
+  const blogCards = document.querySelectorAll('.blog-card');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    blogCards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      const cardBottom = card.getBoundingClientRect().bottom;
+
+      // Add reveal class when card is in view
+      if (cardTop < triggerBottom && cardBottom > 0) {
+        card.classList.add('reveal');
+      } else {
+        // Remove it when out of view to re-enable animation later
+        card.classList.remove('reveal');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);

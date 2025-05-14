@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Varsha's personal portfolio showcasing skills, projects, and contact information." />
+  <title>Varsha | Portfolio</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <nav class="nav-content">
+      <h1 class="logo">Varsha</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hi, I'm <span class="highlight">Varsha</span></h2>
+      <p>A passionate web developer building beautiful and responsive websites.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/profile.jpg" alt="Varsha's profile photo" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I’m Varsha, a frontend developer with a love for creating user-friendly, engaging web experiences.
+        I'm currently learning modern web technologies like JavaScript, React, and Tailwind CSS.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Tailwind CSS</li>
+        <li>React</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-list">
+        <article class="project-card">
+          <img src="images/project1.png" alt="Screenshot of Project 1" />
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>A fully responsive and artistic portfolio website for a personal brand.</p>
+            <a href="#" class="project-link">View Project</a>
+          </div>
+        </article>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p>Want to connect or collaborate? Reach out!</p>
+      <div class="contact-methods">
+        <a href="mailto:varsha@example.com" class="contact-link">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://linkedin.com/in/varsha" target="_blank" class="contact-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/varsha" target="_blank" class="contact-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Varsha. All rights reserved.</p>
+    <a href="#home" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></a>
+  </footer>
+
+  <script>
+    // Smooth scroll behavior for older browsers
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
